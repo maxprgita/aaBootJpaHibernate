@@ -1,0 +1,23 @@
+spiegazione prj aaBootJpaHibernate
+
++++++++++++++++ per usare la gestione centralizzata delle eccezioni: +++++++++++++++++
+1) aggiungere istruzione alla classe principale quella di start applicazione:
+basePackages = {"it.aips.aaBootJpaHibernate.exception", "it.aips.aaBootJpaHibernate.service"}
+param_1 è il path della classe che gestisce la eccezione
+param_2 è il path delle classi soggette alla gestione centralizzata
+Solo i componenti presenti in questi due package saranno considerati da Spring.
+							   
+@SpringBootApplication
+@ComponentScan(basePackages = {"it.aips.aaBootJpaHibernate.exception", 
+							   "it.aips.aaBootJpaHibernate.service"})
+public class AaBootJpaHibernateApplication {
+	public static void main(String[] args) {
+	
+2) definire la classe di gestione centralizzata delle eccezioni GestioneGlobaleEccezioni
+aggiungere l’annotazione @ControllerAdvice, serve a gestire le eccezioni in modo uniforme in tutta l’applicazione.
+@ControllerAdvice
+public class GestioneGlobaleEccezioni {
+
+3) aggiungere l'annotazione @ExceptionHandler(Exception.class)
+l'annotazione definisce il metodo handleException che gestirà le eccezioni di tipo Exception.
+ 
