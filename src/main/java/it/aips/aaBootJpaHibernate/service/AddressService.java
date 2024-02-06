@@ -12,7 +12,6 @@ import it.aips.aaBootJpaHibernate.DTO.EmployeeDto;
 import it.aips.aaBootJpaHibernate.mapper.AddressMapper;
 import it.aips.aaBootJpaHibernate.mapper.EmployeeMapper;
 import it.aips.aaBootJpaHibernate.model.Address;
-import it.aips.aaBootJpaHibernate.model.Employee;
 import it.aips.aaBootJpaHibernate.repository.IAddressRepository;
 
 @Service

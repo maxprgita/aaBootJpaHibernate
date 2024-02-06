@@ -1,8 +1,3 @@
-DOMANDE:
-1-voglio al save sul db che ritorni un boolean, come fare?
-2-in un indirizzo ci possono essere + dipendenti, ad esempio in un palazzo, come fare 1ToMany?
-TODO:
-2-fare tutto employee
 
 					nomenclatura dei packages
 /*
